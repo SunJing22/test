@@ -42,7 +42,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right" style="padding-right:50px;">
               <li><a href="mailto:dev@daisycloud.org">Contact Us</a></li>
-              <li><a href="https://github.com/openstack/daisycloud-core">Download</a></li>
+              <li><a href="https://github.com/openstack/daisycloud-core">Get code</a></li>
           </ul>
       </div>
     </div>
@@ -55,10 +55,11 @@
           <h1 style="font-size:56px;"><b>Daisy</b></h1>
           <p font-size="30px">
             <h3>
-              Deployment and Management Automation for your Private Cloud
+              Provides automated deployment and management of OpenStack and other distributed systems
             </h3>
           </p>
-          <button class="btn btn-large btn-info" style="margin-top:20px;">Demo</button>
+          <a type="button" class="btn btn-large btn-info" href="https://launchpad.net/daisy" style="margin-top:20px;">Begin with bugs</a>
+          <a type="button" class="btn btn-large btn-info" href="https://github.com/openstack/daisycloud-core" style="margin-top:20px;margin-left:15px;">Get code</a>
       </div>
   </div>
 </div>
@@ -107,12 +108,14 @@
   <p></p>
 </div>
 <div id="section5" class="container-fluid">
+  {% block joinin %}
   <h1>怎样参与该开源项目？</h1>
   <p>
       内容包含开发者和测试人员如何参与到daisy开源项目中，可以在开源社区提bug,
       提blueprint,该bug,评审别人提交的代码。指导怎样下载代码，本地测试，修改，提交，评审。
   </p>
   <button class="btn btn-info">具体请参见....</button>
+  {% endblock %}
 </div>
 
 <script type="text/javascript">

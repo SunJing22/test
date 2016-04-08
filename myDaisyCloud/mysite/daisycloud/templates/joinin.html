@@ -1,0 +1,178 @@
+{% extends 'index.html' %}
+{% load i18n %}
+
+
+{% block joinin %}
+<div id="developer" >
+  <p style="font-size:37px;color:pink;">
+      Developer's Manual
+  </p>
+  <div id="develop_steps">
+      <div id="prepare_steps">
+          <div id="prepare_steps_title">
+              <p style="font-size:30px;color:#3DB9B9;">
+                  Preparatory work
+              </p>
+          </div>
+          <div id="prepare_steps_content" style="padding-left:20px;">
+              <div>
+                  <div id="content_title">
+                      <div style="font-size:22px;color:green;bgcolor:grey;" id="showTest" onclick="account_toggle()">
+                         1. Account setup   &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
+                          <!--div  id="showTest" onclick="account_toggle()" style="bgcolor:grey;">
+                              ...
+                          </div-->
+                      </div>
+
+                  <!--div class="btn-group">
+                    <button class="btn btn-default btn-lg dropdown-toggle"
+                           type="button" data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false">
+                    Account setup <span class="caret"></span>
+                    </button>
+                  </div-->
+                  </div>
+
+                  <div id="account_about" hidden style="padding-left:20px;">
+                    <p>First of all, you will need a <a class="" href="https://launchpad.net/+login">Launchpad account</a>.</p>
+                    <p><a href="https://www.openstack.org/join/">Join The OpenStack Foundation,</a> remeber use the same email address as step one.</p>
+                    <p>Visit <a href="https://review.openstack.org/">https://review.openstack.org/ </a>and click the "Sign In",Log in with your Launchpad ID.The first time you login OpenStack's Gerrit, you will nee to select a unique username.</p>
+                    <p><a href="https://review.openstack.org/#/settings/aggrements">Agree to the Individual Contributor License Agreement</a> and provide contact information.</p>
+                  </div>
+              </div>
+              <div>
+                  <div id="git_install_title">
+                      <div style="font-size:22px;color:green;" id="showGitInstall" onclick="git_content_toggle()">
+                          2.Install git and config git&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
+                          <!--button class="btn btn-sm" id="showGitInstall" onclick="git_content_toggle()">
+                              detail...
+                          </button-->
+                      </div>
+                  </div>
+                  <div id="git_install_content" hidden style="padding-left:20px;">
+                      <p>Install git</p>
+                      <p style="padding-left:20px;">For Centos:  yum install git</p>
+                      <p style="padding-left:20px;">For Ubuntu:  apt-get install git</p>
+                      <p>git config</p>
+                      <p style="padding-left:20px;">git config --global user.name "Firstname Lastname"</p>
+                      <p style="padding-left:20px;">git config --global user.email "your_email@youremail.com"</p>
+                  </div>
+              </div>
+              <div>
+                  <div id="git-review_title">
+                      <div style="font-size:22px;color:green;" id="showGitReviewInstall" onclick="gitReview_content_toggle()">
+                          3.Installing git-review&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
+                          <!--button class="btn btn-sm" id="showGitReviewInstall" onclick="gitReview_content_toggle()">
+                              detail...
+                          </button-->
+                      </div>
+                  </div>
+                  <div id="git-review_content" hidden style="padding-left:20px;">
+                      <p>For centos : apt-get install git-review</p>
+                      <p>For Ubuntu : yum install git-review</p>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+      <div id="work_steps">
+          <div id="work_step_title">
+               <p style="font-size:30px;color:#3DB9B9;padding-top:20px;">
+                   Begin work with Daisy
+               </p>
+          </div>
+          <div id="work_step_content" style="padding-left:20px;">
+              <div id="work_one">
+                  <div id="clone_title">
+                     <div style="font-size:22px;color:green;" id="showCloneContent" onclick="Clone_Content_toggle()">
+                          1.Clone code&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
+                          <!--button class="btn btn-sm" id="showCloneContent" onclick="Clone_Content_toggle()">
+                              detail...
+                          </button-->
+                      </div>
+                  </div>
+                  <div id="clone_content" hidden style="padding-left:20px;">
+                      <p>git clone https://git.openstack.org/openstack/daisycloud-core</p>
+                      <p>git config --global gitreview.username yourgerritusername</p>
+                      <p></p>
+                      <p>In case you had already tried to setup git-review and it failed, it might be necessary to remove the Gerrit remote from git:</p>
+                      <p>git remote rm gerrit</p>
+                  </div>
+              </div>
+              <div id="work_two">
+                  <div id="change_title">
+                      <p style="font-size:22px;color:green;" id="showChangeContent" onclick="Change_Content_toggle()">
+                          2.Starting a change&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
+                      </p>
+                  </div>
+                  <div id="change_content" hidden style="padding-left:20px;">
+                      <p>Starting a change details.</p>
+                      <p>work on bugs,modify code locally.</p>
+                      <p></p>
+                  </div>
+              </div>
+              <div id="work_three">
+                  <div id="commit_title">
+                      <p style="font-size:22px;color:green;" id="showCommitContent" onclick="Change_Commit_toggle()">
+                          3.Committing a change&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
+                      </p>
+                  </div>
+                  <div id="commit_content" hidden style="padding-left:20px;">
+                      <p>Committing a change details.</p>
+                      <p>git commit -am "change messages"</p>
+                  </div>
+              </div>
+              <div id="work_four">
+                  <div id="submit_title">
+                      <p style="font-size:22px;color:green;" id="showSubmitContent" onclick="Change_Submit_toggle()">
+                          4.Submitting a change for review&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
+                      </p>
+                  </div>
+                  <div id="submit_content" hidden style="padding-left:20px;">
+                      <p>git review</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--div id="tester" style="width:500px;float:left;border:1px solid;border-color:pink;margin-left:5px;">
+   <p style="font-size:37px;color:pink;">
+      As a Tester
+   </p>
+    <div>
+
+    </div>
+
+</div-->
+<script type="text/javascript">
+    function account_toggle(){
+        $("#account_about").toggle();
+    }
+
+    function git_content_toggle(){
+        $("#git_install_content").toggle();
+    }
+
+    function gitReview_content_toggle(){
+        $("#git-review_content").toggle();
+    }
+
+    function Clone_Content_toggle(){
+         $("#clone_content").toggle();
+    }
+
+    function Change_Content_toggle(){
+        $("#change_content").toggle();
+    }
+
+    function Change_Commit_toggle(){
+        $("#commit_content").toggle();
+    }
+
+    function Change_Submit_toggle(){
+        $("#submit_content").toggle();
+    }
+</script>
+{% endblock %}
