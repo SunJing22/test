@@ -13,10 +13,11 @@
   }
   #top_img {background-color: black;}
   #section1 {padding-top:80px;height:800px;padding-left:200px;padding-right:200px;}
-  #section2 {padding-top:80px;height:750px;color:black; background-color: #f5f6f6;padding-left:200px;padding-right:200px;}
-  #section3 {padding-top:80px;height:750px;padding-left:200px;padding-right:200px;}
-  #section5 {padding-top:80px;height:750px;padding-left:200px;padding-right:200px;}
+  #section2 {padding-top:80px;height:900px;color:black; background-color: #f5f6f6;padding-left:200px;padding-right:200px;}
+  #section3 {padding-top:80px;height:800px;padding-left:200px;padding-right:200px;}
+  #section5 {padding-top:80px;height:800px;padding-left:200px;padding-right:200px;}
   #section4 {padding-top:80px;height:750px;color:black; background-color: #f5f6f6;padding-left:200px;padding-right:200px;}
+  .downloadbox {border: 4px solid #e7edef;border-radius: 15px;text-align: center;padding: 20px;width:600px;height:100px;margin-bottom:5px;}
   </style>
 </head>
 <body data-spy="scroll" data-target=".navbar">
@@ -37,7 +38,7 @@
             <li><a href="#section1">What is DAISY?</a></li>
             <li><a href="#section2">API</a></li>
             <li><a href="#section3">Document</a></li>
-            <li><a href="#section4">WiKi</a></li>
+            <li><a href="#section4">Get To Try</a></li>
             <li><a href="#section5">Join Us</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right" style="padding-right:50px;">
@@ -90,22 +91,28 @@
 </div>
 <section id="section2" class="container-fluid">
   <div class="container">
+      {% block api %}
       <h1>API REFERENCE</h1>
       <p>提供DAISY项目除界面外所有的rest-ful接口</p>
       <button class="btn btn-info">查看接口....</button>
+      {% endblock %}
   </div>
 </section>
 <section id="section3" class="container-fluid">
   <div class="container">
+      {% block document %}
       <h1>开发文档</h1>
       <p>文档包含的内容有如下几点：</p>
       <button class="btn btn-info">查看文档....</button>
+      {% endblock %}
   </div>
 </section>
 <div id="section4" class="container-fluid">
-  <h1>WIKI</h1>
+  {% block get_to_try %}
+  <h1>Get ISO</h1>
   <p>提供openstack下开源项目daisy的wiki页面的超链接，暂缺...........</p>
   <p></p>
+  {% endblock %}
 </div>
 <div id="section5" class="container-fluid">
   {% block joinin %}
