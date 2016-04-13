@@ -1,0 +1,119 @@
+{% load i18n %}
+{% load url from future %}
+
+<div id="api_about" style="width:1000px;">
+    <div id="api_header">
+        <h1 style="color:black;">Daisy REST-FUL API</h1>
+        <!--div>
+            <button>Host</button>
+            <button>cLUSTE</button>
+            <button>Install</button>
+            <button>Uninstall</button>
+            <button>Update</button>
+        </div-->
+    </div>
+    <table class="table table-bordered">
+     <th>Install</th>
+     <tr>
+         <td width="400px">
+             /v1/install/{id}
+         </td>
+         <td align="right">
+             <span class="badge" style="background:green;">POST</span>
+             <span class="badge" style="background:#5bc0de">GET</span>
+         </td>
+     </tr>
+    </table>
+    <table class="table table-bordered">
+     <th>Uninstall</th>
+     <tr>
+         <td width="400px">
+             /v1/uninstall/{id}
+         </td>
+         <td align="right">
+             <span class="badge" style="background:green;">POST</span>
+             <span class="badge" style="background:#5bc0de">GET</span>
+         </td>
+     </tr>
+    </table>
+    <table class="table table-bordered">
+     <th>Update</th>
+     <tr>
+         <td width="400px">
+             /v1/update/{id}
+         </td>
+         <td align="right">
+             <span class="badge" style="background:#5bc0de">GET</span>
+         </td>
+     </tr>
+     <tr>
+         <td width="400px">
+             /v1/update/{id}/versions/{id}
+         </td>
+         <td align="right">
+             <span class="badge" style="background:green;">POST</span>
+         </td>
+     </tr>
+    </table>
+    <table class="table table-bordered">
+     <th>Hosts</th>
+     <tr>
+         <td width="400px">
+             /v1/hosts
+         </td>
+         <td align="right">
+             <span class="badge" style="background:green;">POST</span>
+         </td>
+     </tr>
+     <tr>
+         <td width="400px">
+             /v1/hosts/detail
+         </td>
+         <td align="right">
+             <span class="badge" style="background:#5bc0de">GET</span>
+         </td>
+     </tr>
+     <tr>
+         <td width="400px">
+             /v1/hosts/{id}
+         </td>
+         <td align="right">
+             <span class="badge" style="background:#5bc0de;">GET</span>
+             <span class="badge" style="background:rgb(40, 212, 169) none repeat scroll 0% 0%;">PUT</span>
+             <span class="badge" style="background:#d9534f;">DELETE</span>
+         </td>
+     </tr>
+    </table>
+    <table class="table table-bordered">
+     <th>Clusters</th>
+     <tr>
+         <td width="400px">
+             /v1/clusters
+         </td>
+         <td align="right">
+             <span class="badge" style="background:green;">POST</span>
+         </td>
+     </tr>
+     <tr>
+         <td width="400px">
+             /v1/hosts/detail
+         </td>
+         <td align="right">
+             <span class="badge" style="background:#5bc0de">GET</span>
+         </td>
+     </tr>
+     <tr>
+         <td width="400px">
+             /v1/clusters/{id}
+         </td>
+         <td align="right">
+             <span class="badge" style="background:#5bc0de;">GET</span>
+             <span class="badge" style="background:rgb(40, 212, 169) none repeat scroll 0% 0%;">PUT</span>
+             <span class="badge" style="background:#d9534f;">DELETE</span>
+         </td>
+     </tr>
+    </table>
+    <div>
+        <button class="btn btn-info">Learn more....</button>
+    </div>
+</div>
