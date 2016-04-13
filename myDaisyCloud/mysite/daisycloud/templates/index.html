@@ -11,7 +11,7 @@
   body {
       position: relative;
   }
-  #top_img {background-color: black;}
+  #top_img  {background-color: black;}
   #section1 {padding-top:80px;height:800px;padding-left:200px;padding-right:200px;}
   #section2 {padding-top:80px;height:900px;color:black; background-color: #f5f6f6;padding-left:200px;padding-right:200px;}
   #section3 {padding-top:80px;height:800px;padding-left:200px;padding-right:200px;}
@@ -20,116 +20,60 @@
   .downloadbox {border: 4px solid #e7edef;border-radius: 15px;text-align: center;padding: 20px;width:600px;height:100px;margin-bottom:5px;}
   </style>
 </head>
+
 <body data-spy="scroll" data-target=".navbar">
-
-<nav class="navbar navbar-inverse navbar-fixed-top" style="background:black;height:70px">
-  <div class="container-fluid" style="padding-left:60px;padding-bottom:1px;">
-    <div class="navbar-heade">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><img src="./static/img/daisya.png" height="50px"></a>
+    <div>
+        {% include 'header.html' %}
     </div>
-    <div style="color:write;font-size:20px;padding-top:15px;padding-left:120px;">
-      <div class="collapse navbar-collapse" id="myNavbar" >
-          <ul class="nav navbar-nav">
-            <li><a href="#section1">What is DAISY?</a></li>
-            <li><a href="#section2">API</a></li>
-            <li><a href="#section3">Document</a></li>
-            <li><a href="#section4">Get To Try</a></li>
-            <li><a href="#section5">Join Us</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right" style="padding-right:50px;">
-              <li><a href="mailto:dev@daisycloud.org">Contact Us</a></li>
-              <li><a href="https://github.com/openstack/daisycloud-core">Get code</a></li>
-          </ul>
-      </div>
+
+    <div id="top_img" class="" sytle="font-weight:700px;">
+        {% include 'top.html' %}
     </div>
-  </div>
-</nav>
 
-<div id="top_img" class="" sytle="font-weight:700px;">
-  <div style="height:550px;background-size:1440px 546px;background-image:url(./static/img/ok1.png)">
-      <div style="padding-top:200px;padding-left:240px;">
-          <h1 style="font-size:56px;"><b>Daisy</b></h1>
-          <p font-size="30px">
-            <h3>
-              Provides automated deployment and management of OpenStack and other distributed systems
-            </h3>
-          </p>
-          <a type="button" class="btn btn-large btn-info" href="https://launchpad.net/daisy" style="margin-top:20px;">Begin with bugs</a>
-          <a type="button" class="btn btn-large btn-info" href="https://github.com/openstack/daisycloud-core" style="margin-top:20px;margin-left:15px;">Get code</a>
-      </div>
-  </div>
-</div>
+    <div id="section1" class="container-fluid">
+        {% include 'daisy_desc.html' %}
+    </div>
 
-<div id="section1" class="container-fluid">
-  <div style="margin-top:15px;"><h1>What is daisy?</h1></div>
-  <p><h3>Automate your Deployment and Management</h3></p>
-  <p>
-      Daisy is an open source deployment and management tool for OpenStack.
-      Developed as an OpenStack community effort, it provides an intuitive,
-      GUI-driven experience for deployment and management of OpenStack,
-      related community projects and plug-ins.
-  </p>
-  <p>
-      Daisy brings consumer-grade simplicity to streamline and accelerate
-      the otherwise time-consuming, often complex, and error-prone process
-      of deploying, testing and maintaining various configuration flavors
-      of OpenStack at scale. Unlike other platform-specific deployment or
-      management utilities, Daisy is an upstream OpenStack project that
-      focuses on automating the deployment and testing of OpenStack and
-      a range of third-party options, so it’s not compromised by hard bundling
-      or vendor lock-in.
-  </p>
-  <p>
-     <img src="./static/img/daisy_arcit.JPG">
-  </p>
-      <button class="btn btn-info">Learn more....</button>
-</div>
-<section id="section2" class="container-fluid">
-  <div class="container">
-      {% block api %}
-      <h1>API REFERENCE</h1>
-      <p>提供DAISY项目除界面外所有的rest-ful接口</p>
-      <button class="btn btn-info">查看接口....</button>
+    <section id="section2" class="container-fluid">
+        <div class="container">
+            {% block api %}
+                {% include 'api.html' %}
+            {% endblock %}
+        </div>
+    </section>
+
+    <section id="section3" class="container-fluid">
+        <div class="container">
+            {% block document %}
+               {% include 'document.html' %}
+            {% endblock %}
+        </div>
+    </section>
+
+    <div id="section4" class="container-fluid">
+      {% block get_to_try %}
+          {% include 'getToTry.html' %}
       {% endblock %}
-  </div>
-</section>
-<section id="section3" class="container-fluid">
-  <div class="container">
-      {% block document %}
-      <h1>开发文档</h1>
-      <p>文档包含的内容有如下几点：</p>
-      <button class="btn btn-info">查看文档....</button>
-      {% endblock %}
-  </div>
-</section>
-<div id="section4" class="container-fluid">
-  {% block get_to_try %}
-  <h1>Get ISO</h1>
-  <p>提供openstack下开源项目daisy的wiki页面的超链接，暂缺...........</p>
-  <p></p>
-  {% endblock %}
-</div>
-<div id="section5" class="container-fluid">
-  {% block joinin %}
-  <h1>怎样参与该开源项目？</h1>
-  <p>
-      内容包含开发者和测试人员如何参与到daisy开源项目中，可以在开源社区提bug,
-      提blueprint,该bug,评审别人提交的代码。指导怎样下载代码，本地测试，修改，提交，评审。
-  </p>
-  <button class="btn btn-info">具体请参见....</button>
-  {% endblock %}
-</div>
+    </div>
 
-<script type="text/javascript">
-    $(function(){
-       $('body').scrollspy({ target: '#myNavbar' })
-    });
-</script>
+    <div id="section5" class="container-fluid">
+        {% block joinin %}
+            {% include 'joinIn.html' %}
+        {% endblock %}
+    </div>
+
+    <script type="text/javascript">
+        $(function(){
+            $('body').scrollspy({ target: '#myNavbar' })
+        });
+    </script>
 
 </body>
+
+<footer>
+    {% block footer %}
+       {% include 'footer.html' %}
+    {% endblock %}
+</footer>
+
 </html>
