@@ -2,10 +2,16 @@
 {% load url from future %}
 
 <div id="developer" >
-  <p style="font-size:37px;color:black;">
+  <!--p style="font-size:37px;color:black;">
       Developer's Manual
-  </p>
-  <div id="develop_steps">
+  </p-->
+  <div class="col-md-4" style="margin-top:10px;">
+        <h1 style="color:rgb(107, 194, 63);">How to join in us:</h1>
+        <div style="padding-left:70px;padding-top:10px;">
+            <img src="./static/img/joinin.ico">
+        </div>
+    </div>
+  <div id="develop_steps" class="col-md-8" style="margin-top:40px;">
       <div id="prepare_steps">
           <div id="prepare_steps_title">
               <p style="font-size:30px;color:#3DB9B9;">
@@ -17,20 +23,8 @@
                   <div id="content_title">
                       <div style="font-size:22px;color:green;bgcolor:grey;" id="showTest" onclick="account_toggle()">
                          1. Account setup   &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
-                          <!--div  id="showTest" onclick="account_toggle()" style="bgcolor:grey;">
-                              ...
-                          </div-->
                       </div>
-
-                  <!--div class="btn-group">
-                    <button class="btn btn-default btn-lg dropdown-toggle"
-                           type="button" data-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false">
-                    Account setup <span class="caret"></span>
-                    </button>
-                  </div-->
                   </div>
-
                   <div id="account_about" hidden style="padding-left:20px;">
                     <p>First of all, you will need a <a class="" href="https://launchpad.net/+login">Launchpad account</a>.</p>
                     <p><a href="https://www.openstack.org/join/">Join The OpenStack Foundation,</a> remeber use the same email address as step one.</p>
@@ -41,10 +35,7 @@
               <div>
                   <div id="git_install_title">
                       <div style="font-size:22px;color:green;" id="showGitInstall" onclick="git_content_toggle()">
-                          2.Install git and config git&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
-                          <!--button class="btn btn-sm" id="showGitInstall" onclick="git_content_toggle()">
-                              detail...
-                          </button-->
+                          2. Install git and config git&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
                       </div>
                   </div>
                   <div id="git_install_content" hidden style="padding-left:20px;">
@@ -59,10 +50,7 @@
               <div>
                   <div id="git-review_title">
                       <div style="font-size:22px;color:green;" id="showGitReviewInstall" onclick="gitReview_content_toggle()">
-                          3.Installing git-review&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
-                          <!--button class="btn btn-sm" id="showGitReviewInstall" onclick="gitReview_content_toggle()">
-                              detail...
-                          </button-->
+                          3. Installing git-review&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
                       </div>
                   </div>
                   <div id="git-review_content" hidden style="padding-left:20px;">
@@ -71,7 +59,6 @@
                   </div>
               </div>
           </div>
-
       </div>
       <div id="work_steps">
           <div id="work_step_title">
@@ -83,7 +70,7 @@
               <div id="work_one">
                   <div id="clone_title">
                      <div style="font-size:22px;color:green;" id="showCloneContent" onclick="Clone_Content_toggle()">
-                          1.Clone code&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
+                          1. Clone code&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
                           <!--button class="btn btn-sm" id="showCloneContent" onclick="Clone_Content_toggle()">
                               detail...
                           </button-->
@@ -100,7 +87,7 @@
               <div id="work_two">
                   <div id="change_title">
                       <p style="font-size:22px;color:green;" id="showChangeContent" onclick="Change_Content_toggle()">
-                          2.Starting a change&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
+                          2. Starting a change&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
                       </p>
                   </div>
                   <div id="change_content" hidden style="padding-left:20px;">
@@ -112,7 +99,7 @@
               <div id="work_three">
                   <div id="commit_title">
                       <p style="font-size:22px;color:green;" id="showCommitContent" onclick="Change_Commit_toggle()">
-                          3.Committing a change&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
+                          3. Committing a change&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
                       </p>
                   </div>
                   <div id="commit_content" hidden style="padding-left:20px;">
@@ -123,7 +110,7 @@
               <div id="work_four">
                   <div id="submit_title">
                       <p style="font-size:22px;color:green;" id="showSubmitContent" onclick="Change_Submit_toggle()">
-                          4.Submitting a change for review&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
+                          4. Submitting a change for review&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
                       </p>
                   </div>
                   <div id="submit_content" hidden style="padding-left:20px;">
@@ -135,15 +122,6 @@
   </div>
 </div>
 
-<!--div id="tester" style="width:500px;float:left;border:1px solid;border-color:pink;margin-left:5px;">
-   <p style="font-size:37px;color:pink;">
-      As a Tester
-   </p>
-    <div>
-
-    </div>
-
-</div-->
 <script type="text/javascript">
     function account_toggle(){
         $("#account_about").toggle();
