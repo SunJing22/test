@@ -13,8 +13,8 @@
   }
   #top_img  {background-color: black;}
   #section1 {padding-top:80px;height:800px;padding-left:200px;padding-right:200px;}
-  #section2 {padding-top:80px;height:900px;color:black; background-color: #f5f6f6;padding-left:200px;padding-right:200px;}
-  #section3 {padding-top:80px;height:800px;padding-left:200px;padding-right:200px;}
+  #section3 {padding-top:80px;height:900px;color:black; padding-left:200px;padding-right:200px;}
+  #section2 {padding-top:80px;height:1280px;background-color: #f5f6f6;padding-left:200px;padding-right:200px;}
   #section5 {padding-top:80px;height:800px;padding-left:200px;padding-right:200px;}
   #section4 {padding-top:80px;height:750px;color:black; background-color: #f5f6f6;padding-left:200px;padding-right:200px;}
   .downloadbox {border: 4px solid #e7edef;border-radius: 15px;text-align: center;padding: 20px;width:600px;height:100px;margin-bottom:5px;}
@@ -36,16 +36,16 @@
 
     <section id="section2" class="container-fluid">
         <div class="container">
-            {% block api %}
-                {% include 'api.html' %}
+            {% block document %}
+               {% include 'document.html' %}
             {% endblock %}
         </div>
     </section>
 
     <section id="section3" class="container-fluid">
         <div class="container">
-            {% block document %}
-               {% include 'document.html' %}
+            {% block api %}
+                {% include 'api.html' %}
             {% endblock %}
         </div>
     </section>
