@@ -2,47 +2,58 @@
 {% load url from future %}
 
 <div>
-    <h1>Develop Document</h1>
+    <h1>Structure & Features</h1>
     <div>
-        <h3>分层组件</h3>
-        <p>
-            Daisy-Dashboard module
-            <p style="padding-left:16px;">Daisy-Dashboard提供界面操作，配置和部署相关的所有操作都在界面上进行</p>
-        </p>
-        <p>
-            Daisy-API module
-            <p style="padding-left:16px;">其中Daisy-API位于控制层，提供符合RestFul标准的接口</p>
-        </p>
-        <p>
-            Daisy-Deployment module
+      <div class="col-md-6">
+        <h3> three-layer Modules</h3>
+        <p style="padding-top:20px;">
+            <button class="btn btn-primary">Daisy-Dashboard module</button>
             <p style="padding-left:16px;">
-                位于执行层，负责执行具体的部署工作。Daisy-Deployment模块,使用了动态插件架构，支持不同的后端部署。
-                当前支持的后端列表包括：OpenStack、SDN和CEPH。后续可以很方便的扩展支持其他的后端。
+                Provide the UI, you can do all of configuration and deployment with it.
             </p>
         </p>
-    </div>
-    <div>
+        <p>
+            <button class="btn btn-primary">Daisy-API module</button>
+            <p style="padding-left:16px;">
+                Daisy-API belongs to Control layer, which provide standard RestFul interface.
+            </p>
+        </p>
+        <p>
+            <button class="btn btn-primary">Daisy-Deployment module</button>
+            <p style="padding-left:16px;">
+                Belongs to the executive layer, responsible for the implementation of specific deployment。
+                <!--It use a dynamic plug-in architecture to support different back-end deployment.
+                The currently supported backend list includes：OpenStack、SDN 、CEPH.
+                One can be easily extended to support other backend.<-->
+            </p>
+        </p>
+      </div>
+      <div class="col-md-6">
         <h3>key features</h3>
-        <div style="padding-left:16px;font-size:16px;">
-        <p>hardware discovery<p>
-        <p>Automating Distributed Systems Deployment to Baremetal</p>
-        <p>support Deployment and upgrade for multiple OpenStack distributions</p>
-        <p>support Deployment and upgrade for SDN</p>
-        <p>support Deployment and upgrade for Ceph</p>
-        <p>support for template function</p>
-          Daisy可以将一个OpenStack环境的组网配置导出为模板，在部署一个相似的OpenStack环境时，只需要导入模板即可完成配置。
-        <p>support for  auto scale</p>
-          对于需要做节点扩容的OpenStack环境，Daisy支持节点上电自动完成部署，自动加入OpenStack集群。
-        </p>
+        <div style="padding-top:20px;">
+            <ul>
+            <li>hardware discovery</li>
+            <li>Automating Distributed Systems Deployment to Baremetal</li>
+            <li>support Deployment and upgrade for multiple OpenStack distributions</li>
+            <li>support Deployment and upgrade for SDN</li>
+            <li>support Deployment and upgrade for Ceph</li>
+            <li>support for template function</li>
+          <!--Daisy可以将一个OpenStack环境的组网配置导出为模板，在部署一个相似的OpenStack环境时，只需要导入模板即可完成配置。-->
+            <li>support for  auto scale</li>
+          <!--对于需要做节点扩容的OpenStack环境，Daisy支持节点上电自动完成部署，自动加入OpenStack集群。-->
+          </ul>
         </div>
-    </div>
-    <div>
         <p>
-            <a type="button" class="btn btn-info" href="https://wiki.openstack.org/wiki/Daisy">details link</a>
+            <a type="button" class="btn btn-success" href="https://wiki.openstack.org/wiki/Daisy">For more detail document</a>
         </p>
-        <p><h3>look at a classic deploy vedio:</h3></p>
+      </div>
+      <div class="col-md-8" style="margin-top:60px;">
         <p>
-        <embed src="http://player.youku.com/player.php/sid/XMTUzMzMzNTY2MA==/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+            <h3>look at a typical deployment vedio:</h3>
         </p>
+        <p>
+            <embed src="http://player.youku.com/player.php/sid/XMTUzMzMzNTY2MA==/v.swf" allowFullScreen="true" quality="high" width="680" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+        </p>
+      </div>
     </div>
 </div>

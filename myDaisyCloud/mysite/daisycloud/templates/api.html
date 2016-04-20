@@ -2,17 +2,23 @@
 {% load url from future %}
 
 <div id="api_about" style="width:1000px;">
-    <div id="api_header">
-        <h1 style="color:black;">Daisy REST-FUL API</h1>
-        <!--div>
-            <button>Host</button>
-            <button>cLUSTE</button>
-            <button>Install</button>
-            <button>Uninstall</button>
-            <button>Update</button>
-        </div-->
+    <h1 style="color:black;">REST-FUL API</h1>
+    <div style="font-size:20px;padding-left:10px;">Daisy provide standard RestFul interface</div>
+    <div id="api_header" class="col-md-4">
+
+        <div style="padding-top:20px;font-size:16px;" class="col-md-5">
+            <ul class="nav nav-pills nav-stacked">
+            <li><a >Host</a></li>
+            <li><a >Cluster</a></li>
+            <li><a >Install</a></li>
+            <li><a >Uninstall</a></li>
+            <li><a >Update</a></li>
+            <li><a href="https://wiki.openstack.org/wiki/Daisy">More...</a></li>
+            </ul>
+        </div>
     </div>
-    <table class="table table-bordered">
+    <div class="col-md-8" style="margin-top:30px;">
+    <table class="table table-bordered" id="_Install">
      <th>Install</th>
      <tr>
          <td width="400px">
@@ -24,7 +30,7 @@
          </td>
      </tr>
     </table>
-    <table class="table table-bordered">
+    <table class="table table-bordered" id="_Unistall">
      <th>Uninstall</th>
      <tr>
          <td width="400px">
@@ -36,7 +42,7 @@
          </td>
      </tr>
     </table>
-    <table class="table table-bordered">
+    <table class="table table-bordered" id="_Update">
      <th>Update</th>
      <tr>
          <td width="400px">
@@ -55,7 +61,7 @@
          </td>
      </tr>
     </table>
-    <table class="table table-bordered">
+    <table class="table table-bordered" id="_Host">
      <th>Hosts</th>
      <tr>
          <td width="400px">
@@ -84,7 +90,7 @@
          </td>
      </tr>
     </table>
-    <table class="table table-bordered">
+    <table class="table table-bordered" id="_Cluster">
      <th>Clusters</th>
      <tr>
          <td width="400px">
@@ -113,7 +119,12 @@
          </td>
      </tr>
     </table>
-    <div>
+    <!--div>
         <button class="btn btn-info">Learn more....</button>
+    </div-->
     </div>
 </div>
+
+<script type="text/javascript">
+
+</script>
