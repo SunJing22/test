@@ -2,24 +2,28 @@
 {% load url from future %}
 
 <div id="_section2">
-    <h1>Structure & Features</h1>
+    <div style="text-align:center;color:#333333;">
+        <h1>Structure & Features</h1>
+    </div>
     <div>
-      <div class="col-md-6">
-        <h3> three-layer Modules</h3>
-        <p style="padding-top:20px;">
-            <button class="btn btn-primary">Daisy-Dashboard module</button>
+      <div class="col-md-6" style="padding-left:100px;">
+        <div style="font-size:14px;color:#0e7b65;padding-top:20px;">
+            three-layer Modules
+        </div>
+        <p style="padding-top:20px;font-size:12px;">
+            <div style="color:#0e7b65;">Daisy-Dashboard module</div>
             <p style="padding-left:16px;">
                 Provide the UI, you can do all of configuration and deployment with it.
             </p>
         </p>
-        <p>
-            <button class="btn btn-primary">Daisy-API module</button>
+        <p style="font-size:12px;">
+            <div style="color:#0e7b65;">Daisy-API module</div>
             <p style="padding-left:16px;">
                 Daisy-API belongs to Control layer, which provide standard RestFul interface.
             </p>
         </p>
-        <p>
-            <button class="btn btn-primary">Daisy-Deployment module</button>
+        <p style="font-size:12px;">
+            <div style="color:#0e7b65;">Daisy-Deployment module</div>
             <p style="padding-left:16px;">
                 Belongs to the executive layer, responsible for the implementation of specific deployment。
                 <!--It use a dynamic plug-in architecture to support different back-end deployment.
@@ -28,29 +32,32 @@
             </p>
         </p>
       </div>
-      <div class="col-md-6">
-        <h3>key features</h3>
-        <div style="padding-top:20px;">
+      <div class="col-md-5" style="padding-left:50px;">
+        <div style="font-size:14px;color:#0e7b65;padding-top:20px;padding-left:30px;">
+            key features
+        </div>
+        <div style="font-size:12px;padding-top:30px;">
             <ul>
-            <li>hardware discovery</li>
-            <li>Automating Distributed Systems Deployment to Baremetal</li>
-            <li>support Deployment and upgrade for multiple OpenStack distributions</li>
-            <li>support Deployment and upgrade for SDN</li>
-            <li>support Deployment and upgrade for Ceph</li>
-            <li>support for template function</li>
-          <!--Daisy可以将一个OpenStack环境的组网配置导出为模板，在部署一个相似的OpenStack环境时，只需要导入模板即可完成配置。-->
-            <li>support for  auto scale</li>
-          <!--对于需要做节点扩容的OpenStack环境，Daisy支持节点上电自动完成部署，自动加入OpenStack集群。-->
+            <p><li>hardware discovery</li></p>
+            <p><li>Automating Distributed Systems Deployment to Baremetal</li></p>
+            <p><li>support Deployment and upgrade for multiple OpenStack distributions</li></p>
+            <p><li>support Deployment and upgrade for SDN</li></p>
+            <p><li>support Deployment and upgrade for Ceph</li></p>
+            <p><li>support for template function</li></p>
+            <p><li>support for  auto scale</li></p>
           </ul>
         </div>
-        <p>
-            <a type="button" class="btn btn-success" href="https://wiki.openstack.org/wiki/Daisy">For more detail...</a>
-        </p>
       </div>
-      <div class="col-md-8" style="margin-top:60px;">
-        <p>
-            <h3>look at a typical deployment vedio:</h3>
-        </p>
+        <div style="text-align:center;">
+            <a type="button" class="btn btn-large" href="https://wiki.openstack.org/wiki/Daisy"
+            style="width:132px;height:45px;margin-top:30px;padding-top:10px;background:#fdd002;color:#333333;">
+                For more detail
+            </a>
+        </div>
+      <div class="col-md-8" style="margin-top:60px;align:center;padding-left:200px;text-align:center;">
+        <div style="font-size:20px;color:#0e7b65;padding-bottom:20px;">
+            look at a typical deployment vedio:</h3>
+        </div>
         <p>
             <embed src="http://player.youku.com/player.php/sid/XMTUzMzMzNTY2MA==/v.swf" allowFullScreen="true" quality="high" width="680" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
         </p>
