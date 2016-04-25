@@ -11,6 +11,10 @@
   body {
       position: relative;
   }
+  .daisy_nav {
+      background:#172602;
+      height:70px
+  }
   #top_img  {
       background-color: black;
       }
@@ -36,7 +40,7 @@
       }
   #section4 {
       padding-top:80px;
-      height:750px;
+      height:700px;
       color:black;
       background-color: #f5f6f6;
       padding-left:200px;
@@ -44,9 +48,12 @@
       }
   #section5 {
       padding-top:80px;
-      height:800px;
       padding-left:200px;
       padding-right:200px;
+      padding-bottom:20px;
+      height:auto!important;
+      height:400px;
+      min-height:400px;
       }
   .downloadbox {
       border: 4px solid #e7edef;
@@ -95,7 +102,7 @@
       {% endblock %}
     </div>
 
-    <div id="section5" class="container-fluid" style="height:auto!important;height:700px;min-height:700px;">
+    <div id="section5" class="container-fluid">
         {% block joinin %}
             {% include 'joinin.html' %}
         {% endblock %}
