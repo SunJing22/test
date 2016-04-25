@@ -1,23 +1,49 @@
 {% load i18n %}
 {% load url from future %}
 
-<div id="developer" style="text-align:center;">
-  <div style="margin-top:10px;">
-        <h1 style="color:rgb(107, 194, 63);">How to join in us:</h1>
+<style>
+    .joinIn_bg {
+        height:400px;
+        background-image:url(./static/img/doubt.png);
+        background-repeat: no-repeat;
+        background-position:right;
+    }
+    .title_level_one {
+        margin-top: 10px;
+        text-align: center;
+        color: #333333;
+        margin-bottom:20px;
+    }
+    .title_level_two {
+        font-size: 16px;
+        color: #0e7b65;
+        padding-top: 20px;
+    }
+    .title_level_three {
+        font-size: 14px;
+        color: #333333;
+    }
+</style>
+
+<div id="developer" class="joinIn_bg">
+  <div class="title_level_one">
+        <h2>How to join in us</h2>
   </div>
-  <div id="develop_steps" style="margin-top:40px;">
-      <div id="prepare_steps">
+  <div id="develop_steps">
+      <div id="prepare_steps" class="col-md-5 col-md-offset-1">
           <div id="prepare_steps_title">
-              <p style="font-size:30px;color:#3DB9B9;">
+              <p class="title_level_two">
                   Preparatory work
               </p>
           </div>
-          <div id="prepare_steps_content" style="padding-left:20px;">
+          <div id="prepare_steps_content">
               <div>
                   <div id="content_title">
-                      <div style="font-size:22px;color:green;bgcolor:grey;" id="showTest" onclick="account_toggle()">
-                         1. Account setup   &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
-                      </div>
+                      <p class="title_level_three" id="showTest" onclick="account_toggle()">
+                          <img src="./static/img/dot.PNG">
+                          Account setup   &nbsp;&nbsp; &nbsp;&nbsp;
+                          <img src="./static/img/detail.png">
+                      </p>
                   </div>
                   <div id="account_about" hidden style="padding-left:20px;">
                     <p>First of all, you will need a <a class="" href="https://launchpad.net/+login">Launchpad account</a>.</p>
@@ -28,9 +54,11 @@
               </div>
               <div>
                   <div id="git_install_title">
-                      <div style="font-size:22px;color:green;" id="showGitInstall" onclick="git_content_toggle()">
-                          2. Install git and config git&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
-                      </div>
+                      <p class="title_level_three" id="showGitInstall" onclick="git_content_toggle()">
+                          <img src="./static/img/dot.PNG">
+                          Install git and config git&nbsp;&nbsp; &nbsp;&nbsp;
+                          <img src="./static/img/detail.png">
+                      </p>
                   </div>
                   <div id="git_install_content" hidden style="padding-left:20px;">
                       <p>Install git</p>
@@ -43,9 +71,11 @@
               </div>
               <div>
                   <div id="git-review_title">
-                      <div style="font-size:22px;color:green;" id="showGitReviewInstall" onclick="gitReview_content_toggle()">
-                          3. Installing git-review&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
-                      </div>
+                      <p class="title_level_three" id="showGitReviewInstall" onclick="gitReview_content_toggle()">
+                          <img src="./static/img/dot.PNG">
+                          Installing git-review&nbsp;&nbsp; &nbsp;&nbsp;
+                          <img src="./static/img/detail.png">
+                      </p>
                   </div>
                   <div id="git-review_content" hidden style="padding-left:20px;">
                       <p>For centos : apt-get install git-review</p>
@@ -54,18 +84,20 @@
               </div>
           </div>
       </div>
-      <div id="work_steps">
+      <div id="work_steps" class="col-md-5 col-md-offset-1">
           <div id="work_step_title">
-               <p style="font-size:30px;color:#3DB9B9;padding-top:20px;">
+               <p class="title_level_two">
                    Begin work with Daisy
                </p>
           </div>
-          <div id="work_step_content" style="padding-left:20px;">
+          <div id="work_step_content">
               <div id="work_one">
                   <div id="clone_title">
-                     <div style="font-size:22px;color:green;" id="showCloneContent" onclick="Clone_Content_toggle()">
-                          1. Clone code&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
-                      </div>
+                     <p class="title_level_three" id="showCloneContent" onclick="Clone_Content_toggle()">
+                         <img src="./static/img/dot.PNG">
+                         Clone code&nbsp;&nbsp; &nbsp;&nbsp;
+                         <img src="./static/img/detail.png">
+                      </p>
                   </div>
                   <div id="clone_content" hidden style="padding-left:20px;">
                       <p>git clone https://git.openstack.org/openstack/daisycloud-core</p>
@@ -77,8 +109,10 @@
               </div>
               <div id="work_two">
                   <div id="change_title">
-                      <p style="font-size:22px;color:green;" id="showChangeContent" onclick="Change_Content_toggle()">
-                          2. Starting a change&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
+                      <p class="title_level_three" id="showChangeContent" onclick="Change_Content_toggle()">
+                          <img src="./static/img/dot.PNG">
+                          Starting a change&nbsp;&nbsp; &nbsp;&nbsp;
+                          <img src="./static/img/detail.png">
                       </p>
                   </div>
                   <div id="change_content" hidden style="padding-left:20px;">
@@ -89,8 +123,10 @@
               </div>
               <div id="work_three">
                   <div id="commit_title">
-                      <p style="font-size:22px;color:green;" id="showCommitContent" onclick="Change_Commit_toggle()">
-                          3. Committing a change&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
+                      <p class="title_level_three" id="showCommitContent" onclick="Change_Commit_toggle()">
+                          <img src="./static/img/dot.PNG">
+                          Committing a change&nbsp;&nbsp; &nbsp;&nbsp;
+                          <img src="./static/img/detail.png">
                       </p>
                   </div>
                   <div id="commit_content" hidden style="padding-left:20px;">
@@ -100,8 +136,10 @@
               </div>
               <div id="work_four">
                   <div id="submit_title">
-                      <p style="font-size:22px;color:green;" id="showSubmitContent" onclick="Change_Submit_toggle()">
-                          4. Submitting a change for review&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;   ....
+                      <p class="title_level_three" id="showSubmitContent" onclick="Change_Submit_toggle()">
+                          <img src="./static/img/dot.PNG">
+                          Submitting a change for review&nbsp;&nbsp; &nbsp;&nbsp;
+                          <img src="./static/img/detail.png">
                       </p>
                   </div>
                   <div id="submit_content" hidden style="padding-left:20px;">

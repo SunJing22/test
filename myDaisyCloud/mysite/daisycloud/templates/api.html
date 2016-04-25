@@ -1,12 +1,33 @@
 {% load i18n %}
 {% load url from future %}
 
-<div id="api_about" style="width:1000px;text-align:center;">
-    <h1 style="color:black;">REST-FUL API</h1>
-    <div style="font-size:20px;padding-left:10px;">Daisy provide standard RestFul interface</div>
-    <div id="api_header" class="col-md-4">
+<style>
+    .api_level_two {
+        font-size:20px;padding-left:10px;color:#333333;text-align:center;
+    }
+    .get {
+        background:#5bc0de
+    }
+    .post {
+        background:green;
+    }
+    .put {
+        background:rgb(40, 212, 169) none repeat scroll 0% 0%;
+    }
+    .delete {
+        background:#d9534f;
+    }
+</style>
 
-        <div style="padding-top:20px;font-size:16px;" class="col-md-5">
+<div id="api_about" style="width:1000px;">
+    <h2 style="color:#333333;text-align:center;">
+        REST-FUL API
+    </h2>
+    <div class="api_level_two">
+        Daisy provide standard RestFul interface
+    </div>
+    <div id="api_header" class="col-md-4">
+        <div style="padding-top:30px;font-size:16px;text-align:left;" class="col-md-5 col-md-offset-3">
             <ul class="nav nav-pills nav-stacked">
             <li><a >Host</a></li>
             <li><a >Cluster</a></li>
@@ -14,115 +35,116 @@
             <li><a >Uninstall</a></li>
             <li><a >Update</a></li>
             <li>
-                <a type="button" class="btn btn-success" href="https://wiki.openstack.org/wiki/Daisy">
-                    For More...
+                <a type="button" class="btn btn-large" href="https://wiki.openstack.org/wiki/Daisy"
+                        style="width:132px;height:45px;margin-top:30px;padding-top:10px;background:#fdd002;color:#333333;">
+                    For More
                 </a>
             </li>
             </ul>
         </div>
     </div>
     <div class="col-md-8" style="margin-top:30px;">
-    <table class="table table-bordered" id="_Install">
-     <th>Install</th>
-     <tr>
-         <td width="400px">
-             /v1/install/{id}
-         </td>
-         <td align="right">
-             <span class="badge" style="background:green;">POST</span>
-             <span class="badge" style="background:#5bc0de">GET</span>
-         </td>
-     </tr>
-    </table>
-    <table class="table table-bordered" id="_Unistall">
-     <th>Uninstall</th>
-     <tr>
-         <td width="400px">
-             /v1/uninstall/{id}
-         </td>
-         <td align="right">
-             <span class="badge" style="background:green;">POST</span>
-             <span class="badge" style="background:#5bc0de">GET</span>
-         </td>
-     </tr>
-    </table>
-    <table class="table table-bordered" id="_Update">
-     <th>Update</th>
-     <tr>
-         <td width="400px">
-             /v1/update/{id}
-         </td>
-         <td align="right">
-             <span class="badge" style="background:#5bc0de">GET</span>
-         </td>
-     </tr>
-     <tr>
-         <td width="400px">
-             /v1/update/{id}/versions/{id}
-         </td>
-         <td align="right">
-             <span class="badge" style="background:green;">POST</span>
-         </td>
-     </tr>
-    </table>
-    <table class="table table-bordered" id="_Host">
-     <th>Hosts</th>
-     <tr>
-         <td width="400px">
-             /v1/hosts
-         </td>
-         <td align="right">
-             <span class="badge" style="background:green;">POST</span>
-         </td>
-     </tr>
-     <tr>
-         <td width="400px">
-             /v1/hosts/detail
-         </td>
-         <td align="right">
-             <span class="badge" style="background:#5bc0de">GET</span>
-         </td>
-     </tr>
-     <tr>
-         <td width="400px">
-             /v1/hosts/{id}
-         </td>
-         <td align="right">
-             <span class="badge" style="background:#5bc0de;">GET</span>
-             <span class="badge" style="background:rgb(40, 212, 169) none repeat scroll 0% 0%;">PUT</span>
-             <span class="badge" style="background:#d9534f;">DELETE</span>
-         </td>
-     </tr>
-    </table>
-    <table class="table table-bordered" id="_Cluster">
-     <th>Clusters</th>
-     <tr>
-         <td width="400px">
-             /v1/clusters
-         </td>
-         <td align="right">
-             <span class="badge" style="background:green;">POST</span>
-         </td>
-     </tr>
-     <tr>
-         <td width="400px">
-             /v1/hosts/detail
-         </td>
-         <td align="right">
-             <span class="badge" style="background:#5bc0de">GET</span>
-         </td>
-     </tr>
-     <tr>
-         <td width="400px">
-             /v1/clusters/{id}
-         </td>
-         <td align="right">
-             <span class="badge" style="background:#5bc0de;">GET</span>
-             <span class="badge" style="background:rgb(40, 212, 169) none repeat scroll 0% 0%;">PUT</span>
-             <span class="badge" style="background:#d9534f;">DELETE</span>
-         </td>
-     </tr>
-    </table>
+        <table class="table table-bordered" id="_Install">
+            <th>Install</th>
+            <tr>
+                <td width="400px">
+                    /v1/install/{id}
+                </td>
+                <td align="right">
+                    <span class="badge post">POST</span>
+                    <span class="badge get">GET</span>
+                </td>
+            </tr>
+        </table>
+        <table class="table table-bordered" id="_Unistall">
+            <th>Uninstall</th>
+            <tr>
+                <td width="400px">
+                    /v1/uninstall/{id}
+                </td>
+                <td align="right">
+                    <span class="badge post">POST</span>
+                    <span class="badge get">GET</span>
+                </td>
+            </tr>
+        </table>
+        <table class="table table-bordered" id="_Update">
+            <th>Update</th>
+            <tr>
+                <td width="400px">
+                    /v1/update/{id}
+                </td>
+                <td align="right">
+                    <span class="badge get">GET</span>
+                </td>
+            </tr>
+            <tr>
+                <td width="400px">
+                    /v1/update/{id}/versions/{id}
+                </td>
+                <td align="right">
+                    <span class="badge post">POST</span>
+                </td>
+            </tr>
+        </table>
+        <table class="table table-bordered" id="_Host">
+            <th>Hosts</th>
+            <tr>
+                <td width="400px">
+                    /v1/hosts
+                </td>
+                <td align="right">
+                    <span class="badge post">POST</span>
+                </td>
+            </tr>
+            <tr>
+                <td width="400px">
+                    /v1/hosts/detail
+                </td>
+                <td align="right">
+                    <span class="badge get">GET</span>
+                </td>
+            </tr>
+            <tr>
+                <td width="400px">
+                    /v1/hosts/{id}
+                </td>
+                <td align="right">
+                    <span class="badge get">GET</span>
+                    <span class="badge put" style="">PUT</span>
+                    <span class="badge delete">DELETE</span>
+                </td>
+            </tr>
+        </table>
+        <table class="table table-bordered" id="_Cluster">
+            <th>Clusters</th>
+            <tr>
+                <td width="400px">
+                    /v1/clusters
+                </td>
+                <td align="right">
+                    <span class="badge post">POST</span>
+                </td>
+            </tr>
+            <tr>
+                <td width="400px">
+                    /v1/hosts/detail
+                </td>
+                <td align="right">
+                    <span class="badge get">GET</span>
+                </td>
+            </tr>
+            <tr>
+                <td width="400px">
+                    /v1/clusters/{id}
+                </td>
+                <td align="right">
+                    <span class="badge get">GET</span>
+                    <span class="badge put">PUT</span>
+                    <span class="badge delete">DELETE</span>
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
 
