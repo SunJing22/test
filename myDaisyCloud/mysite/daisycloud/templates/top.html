@@ -1,6 +1,11 @@
 {% load i18n %}
 {% load url from future %}
 
+<style>
+    .link_btn {
+        width:132px;height:45px;float:left;margin-top:20px;padding-top:10px;font-size:12px;
+    }
+</style>
 
 <div style="color:white;margin-top:70px;height:476px;background-image:url(./static/img/daisy_bg.png);background-size:cover;">
       <div style="padding-top:90px;padding-left:300px;">
@@ -15,16 +20,16 @@
                   OpenStack and other distributed systems
               </div>
           </div>
-          <div style="width:132px;height:45px;float:left;margin-top:20px;background-image:url(./static/img/btn_transp.png)">
-              <a type="button" class="btn btn-large"
-                     style="padding-top:10px;color:#dfe0de;font-size:12px;"
+          <div class="link_btn" style="background-image:url(./static/img/btn_transp.png);
+            padding-left:15px;">
+              <a  style="color:#dfe0de;"
                      href="https://launchpad.net/daisycloud-core">
                   Begin with bugs
               </a>
           </div>
-          <div style="margin-left:30px;float:left;width:132px;color:#dfe0de;height:45px;margin-top:20px;background-image:url(./static/img/btn_transp.png)">
-              <a type="button" class="btn btn-large"
-                 style="padding-top:10px;padding-left:25px;color:#dfe0de;font-size:12px;"
+          <div class="link_btn" style="margin-left:30px;background-image:url(./static/img/btn_transp.png);
+            padding-left:25px;">
+              <a style="color:#dfe0de;"
                  href="https://github.com/openstack/daisycloud-core">
                   Glone code
               </a>
