@@ -2,12 +2,27 @@
 {% load url from future %}
 
 <style>
+    .top_bg {
+        color: white;
+        margin-top: 70px;
+        height: 476px;
+        background-image: url(./static/img/daisy_bg.png);
+        background-size: cover;
+    }
     .link_btn {
         width:132px;height:45px;float:left;margin-top:20px;padding-top:10px;font-size:12px;
     }
+    .link_btn > a:hover {
+        text-decoration:none ;
+        } 
+    .link_btn > a:focus {
+        text-decoration:none ;
+        outline: none;
+        -moz-outline:none;
+        }
 </style>
 
-<div style="color:white;margin-top:70px;height:476px;background-image:url(./static/img/daisy_bg.png);background-size:cover;">
+<div class="top_bg">
       <div style="padding-top:90px;padding-left:300px;">
           <h1 style="font-size:56px;color:#fdd002">
               <b>Daisy</b>
@@ -24,7 +39,7 @@
             padding-left:15px;">
               <a  style="color:#dfe0de;"
                      href="https://launchpad.net/daisycloud-core">
-                  Begin with bugs
+                  Report a bug
               </a>
           </div>
           <div class="link_btn" style="margin-left:30px;background-image:url(./static/img/btn_transp.png);
