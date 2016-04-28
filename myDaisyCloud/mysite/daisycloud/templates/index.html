@@ -20,36 +20,33 @@
       }
   #section1 {
       padding-top:80px;
-      height:800px;
-      padding-left:200px;
-      padding-right:200px;
+      padding-bottom:20px;
+      height:auto!important;
+      min-height:400px;
       }
   #section2 {
       padding-top: 80px;
-      height: 1100px;
+      padding-bottom: 20px;
+      height: auto!important;
+      min-height: 1100px;
       background-color: #f5f6f6;
-      padding-left: 200px;
-      padding-right: 200px;
       }
   #section3 {
       padding-top:80px;
-      height:900px;
+      height: auto!important;
+      min-height:900px;
       color:black;
-      padding-left:200px;
-      padding-right:200px;
       }
   #section4 {
       padding-top:80px;
-      height:700px;
+      padding-bottom:20px;
+      height: auto!important;
+      min-height:700px;
       color:black;
       background-color: #f5f6f6;
-      padding-left:200px;
-      padding-right:200px;
       }
   #section5 {
       padding-top:80px;
-      padding-left:200px;
-      padding-right:200px;
       padding-bottom:20px;
       height:auto!important;
       height:400px;
@@ -60,7 +57,7 @@
       border-radius: 15px;
       text-align: center;
       padding: 20px;
-      width:600px;
+      width:80%;
       height:100px;
       margin-bottom:5px;
       }
@@ -72,7 +69,7 @@
         {% include 'header.html' %}
     </div>
 
-    <div id="top_img" class="" sytle="font-weight:700px;">
+    <div id="top_img" class="container-fluid">
         {% include 'top.html' %}
     </div>
 
@@ -81,19 +78,15 @@
     </div>
 
     <section id="section2" class="container-fluid">
-        <div class="container">
-            {% block document %}
-               {% include 'document.html' %}
-            {% endblock %}
-        </div>
+        {% block document %}
+            {% include 'document.html' %}
+        {% endblock %}
     </section>
 
     <section id="section3" class="container-fluid">
-        <div class="container">
-            {% block api %}
-                {% include 'api.html' %}
-            {% endblock %}
-        </div>
+        {% block api %}
+            {% include 'api.html' %}
+        {% endblock %}
     </section>
 
     <div id="section4" class="container-fluid">
