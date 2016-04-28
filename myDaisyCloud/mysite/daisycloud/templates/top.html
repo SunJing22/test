@@ -5,9 +5,13 @@
     .top_bg {
         color: white;
         margin-top: 70px;
-        height: 476px;
+        height:auto!important;
+        min-height: 476px;
+        width:100%;
         background-image: url(./static/img/daisy_bg.png);
         background-size: cover;
+        background-position: center center;
+
     }
     .link_btn {
         width:132px;height:45px;float:left;margin-top:20px;padding-top:10px;font-size:12px;
@@ -22,8 +26,9 @@
         }
 </style>
 
-<div class="top_bg">
-      <div style="padding-top:90px;padding-left:300px;">
+<div >
+<div class="row top_bg">
+      <div class="col-md-3 col-md-offset-2" style="padding-top:90px;">
           <h1 style="font-size:56px;color:#fdd002">
               <b>Daisy</b>
           </h1>
@@ -50,4 +55,5 @@
               </a>
           </div>
       </div>
+</div>
 </div>
